@@ -1,0 +1,114 @@
+Training logistic_regression...
+
+logistic_regression metrics:
+Accuracy: 1.00
+Precision: 1.00
+Recall: 1.00
+F1 Score: 1.00
+ROC-AUC: 1.00
+Confusion Matrix:
+[[19  0  0]
+ [ 0 13  0]
+ [ 0  0 13]]
+Log Loss: 0.17
+Mean Absolute Error: 0.00
+Mean Squared Error: 0.00
+Root Mean Squared Error: 0.00
+R-squared: 1.00
+Adjusted R-squared: 1.00
+logistic_regression model saved to models\logistic_regression.pkl
+Training decision_tree...
+
+decision_tree metrics:
+Accuracy: 0.98
+Precision: 0.98
+Recall: 0.98
+F1 Score: 0.98
+ROC-AUC: 1.00
+Confusion Matrix:
+[[19  0  0]
+ [ 0 12  1]
+ [ 0  0 13]]
+Log Loss: 0.11
+Mean Absolute Error: 0.02
+Mean Squared Error: 0.02
+Root Mean Squared Error: 0.15
+R-squared: 0.97
+Adjusted R-squared: 0.96
+decision_tree model saved to models\decision_tree.pkl
+Training random_forest...
+
+random_forest metrics:
+Accuracy: 1.00
+Precision: 1.00
+Recall: 1.00
+F1 Score: 1.00
+ROC-AUC: 1.00
+Confusion Matrix:
+[[19  0  0]
+ [ 0 13  0]
+ [ 0  0 13]]
+Log Loss: 0.09
+Mean Absolute Error: 0.00
+Mean Squared Error: 0.00
+Root Mean Squared Error: 0.00
+R-squared: 1.00
+Adjusted R-squared: 1.00
+random_forest model saved to models\random_forest.pkl
+Training svm...
+
+svm metrics:
+Accuracy: 0.98
+Precision: 0.98
+Recall: 0.98
+F1 Score: 0.98
+ROC-AUC: 1.00
+Confusion Matrix:
+[[19  0  0]
+ [ 0 12  1]
+ [ 0  0 13]]
+Log Loss: 0.09
+Mean Absolute Error: 0.02
+Mean Squared Error: 0.02
+Root Mean Squared Error: 0.15
+R-squared: 0.97
+Adjusted R-squared: 0.96
+svm model saved to models\svm.pkl
+Training naive_bayes...
+
+naive_bayes metrics:
+Accuracy: 1.00
+Precision: 1.00
+Recall: 1.00
+F1 Score: 1.00
+ROC-AUC: 1.00
+Confusion Matrix:
+[[19  0  0]
+ [ 0 13  0]
+ [ 0  0 13]]
+Log Loss: 0.07
+Mean Absolute Error: 0.00
+Mean Squared Error: 0.00
+Root Mean Squared Error: 0.00
+R-squared: 1.00
+Adjusted R-squared: 1.00
+naive_bayes model saved to models\naive_bayes.pkl
+Training knn...
+
+knn metrics:
+Accuracy: 1.00
+Precision: 1.00
+Recall: 1.00
+F1 Score: 1.00
+ROC-AUC: 1.00
+Confusion Matrix:
+[[19  0  0]
+ [ 0 13  0]
+ [ 0  0 13]]
+Log Loss: 0.07
+Mean Absolute Error: 0.00
+Mean Squared Error: 0.00
+Root Mean Squared Error: 0.00
+R-squared: 1.00
+Adjusted R-squared: 1.00
+knn model saved to models\knn.pkl
