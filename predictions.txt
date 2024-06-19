@@ -1,0 +1,120 @@
+test_data : 5.1, 3.5, 1.4, 0.2
+Model: decision_tree
+Prediction: 0
+Model: knn
+Prediction: 0
+Model: logistic_regression
+Prediction: 0
+Model: naive_bayes
+Prediction: 0
+Model: random_forest
+Prediction: 0
+Model: svm
+Prediction: 0
+
+
+test_data : 4.9, 3.0, 1.4, 0.2
+Model: decision_tree
+Prediction: 0
+Model: knn
+Prediction: 0
+Model: logistic_regression
+Prediction: 0
+Model: naive_bayes
+Prediction: 0
+Model: random_forest
+Prediction: 0
+Model: svm
+Prediction: 0
+
+
+test_data : 4.7, 3.2, 1.3, 0.2
+Model: decision_tree
+Prediction: 0
+Model: knn
+Prediction: 0
+Model: logistic_regression
+Prediction: 0
+Model: naive_bayes
+Prediction: 0
+Model: random_forest
+Prediction: 0
+Model: svm
+Prediction: 0
+
+
+test_data : 4.6, 3.1, 1.5, 0.2
+Model: decision_tree
+Prediction: 0
+Model: knn
+Prediction: 0
+Model: logistic_regression
+Prediction: 0
+Model: naive_bayes
+Prediction: 0
+Model: random_forest
+Prediction: 0
+Model: svm
+Prediction: 0
+
+
+test_data : 5.0, 3.6, 1.4, 0.2
+Model: decision_tree
+Prediction: 0
+Model: knn
+Prediction: 0
+Model: logistic_regression
+Prediction: 0
+Model: naive_bayes
+Prediction: 0
+Model: random_forest
+Prediction: 0
+Model: svm
+Prediction: 0
+
+
+test_data : 5.4, 3.9, 1.7, 0.4
+Model: decision_tree
+Prediction: 0
+Model: knn
+Prediction: 0
+Model: logistic_regression
+Prediction: 0
+Model: naive_bayes
+Prediction: 0
+Model: random_forest
+Prediction: 0
+Model: svm
+Prediction: 0
+
+
+test_data : 4.6, 3.4, 1.4, 0.3
+Model: decision_tree
+Prediction: 0
+Model: knn
+Prediction: 0
+Model: logistic_regression
+Prediction: 0
+Model: naive_bayes
+Prediction: 0
+Model: random_forest
+Prediction: 0
+Model: svm
+Prediction: 0
+
+
+test_data : 7.7, 3.8, 6.7, 2.2
+Model: decision_tree
+Prediction: 2
+Model: knn
+Prediction: 2
+Model: logistic_regression
+Prediction: 2
+Model: naive_bayes
+Prediction: 2
+Model: random_forest
+Prediction: 2
+Model: svm
+Prediction: 2
+
+

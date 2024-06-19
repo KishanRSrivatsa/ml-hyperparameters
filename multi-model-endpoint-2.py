@@ -24,23 +24,25 @@ models = load_models(models_dir)
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json(force=True)
-    model_name = data.get('model')
     input_data = data.get('input')
     
-    if not model_name or not input_data:
-        return jsonify({'error': 'Model name and input data are required'}), 400
-
-    if model_name not in models:
-        return jsonify({'error': 'Model not found'}), 404
+    if not input_data:
+        return jsonify({'error': 'Input data is required'}), 400
 
     input_data = np.array(input_data).reshape(1, -1)  # Convert 1D array to 2D array
 
-    try:
-        model = models[model_name]
-        prediction = model.predict(input_data)
-        return jsonify({'prediction': prediction.tolist()})
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
+    predictions = {}
+    for model_name, model in models.items():
+        try:
+            prediction = model.predict(input_data)
+            prediction_value = prediction[0]  # Extract the single prediction value
+            if isinstance(prediction_value, np.generic):
+                prediction_value = prediction_value.item()  # Convert numpy scalar to native Python type
+            predictions[model_name] = prediction_value
+        except Exception as e:
+            predictions[model_name] = str(e)
+
+    return jsonify(predictions)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
