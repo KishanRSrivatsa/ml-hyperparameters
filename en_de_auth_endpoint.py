@@ -3,6 +3,7 @@ import pickle
 import os
 import numpy as np
 import sqlite3
+from encry_decrpt_token import decrypt_token
 
 app = Flask(__name__)
 
@@ -23,7 +24,7 @@ models = load_models(models_dir)
 
 # Function to validate token
 def validate_token(token):
-    conn = sqlite3.connect('C:/Users/Hp/Documents/Projects/ML-Hyperparamters/token-creation/tokens.db')
+    conn = sqlite3.connect('token-creation/tokens.db')
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM tokens WHERE token=?", (token,))
     result = cursor.fetchone()
@@ -34,9 +35,15 @@ def validate_token(token):
 @app.before_request
 def require_authentication():
     if request.endpoint == 'predict':  # Only apply to /predict endpoint
-        token = request.headers.get('Authorization')
-        if not token or not validate_token(token):
-            return jsonify({'error': 'Please Verify the Access Token'}), 401
+        token = request.args.get('Authorization')
+        if not token:
+            return jsonify({'error': 'Please verify the Access Token'}), 401
+        try:
+            decrypted_token = decrypt_token(token.encode('utf-8'))
+            if not validate_token(decrypted_token):
+                return jsonify({'error': 'Decrypted Token Unauthorized'}), 401
+        except Exception as e:
+            return jsonify({'error': 'Unauthorized', 'message': str(e)}), 401
 
 # Route for prediction
 @app.route('/predict', methods=['POST'])
