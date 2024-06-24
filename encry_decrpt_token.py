@@ -1,8 +1,19 @@
 from cryptography.fernet import Fernet
+import sqlite3
 
-# Generate a key for encryption/decryption
-# You must save this key securely and use it consistently across client and server
-key = Fernet.generate_key()
+# Function to fetch the encryption key from the database
+def load_key_from_db():
+    conn = sqlite3.connect('token-creation/tokens.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT key FROM tokens WHERE id = 1")  # Assuming there is only one key
+    result = cursor.fetchone()
+    conn.close()
+    if result:
+        return result[0].encode()  # Convert string to bytes
+    else:
+        raise ValueError("Encryption key not found in database")
+
+key = load_key_from_db()
 cipher_suite = Fernet(key)
 
 def encrypt_token(token):
